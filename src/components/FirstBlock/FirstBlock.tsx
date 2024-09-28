@@ -11,9 +11,12 @@ import { useEffect, useRef } from "react";
 
 export function FirstBlock() {
     const images = [
-        "/assets/1.webp",
-        "/assets/card-2.png",
-        "/assets/card-3.png",  // Agrega las imágenes que desees
+        "/assets/imagen_1.jpg",
+        "/assets/imagen_2.jpg",
+        "/assets/imagen_6.jpg",
+        "/assets/imagen_7.jpg",
+        "/assets/imagen_8.jpg",
+        "/assets/imagen_9.jpg", // Agrega las imágenes que desees
     ];
 
     // Para crear la animación personalizada cuando cambia de slide
