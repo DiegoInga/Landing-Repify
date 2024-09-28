@@ -4,22 +4,22 @@ export const dataFeaturesBusiness: BestBusinessData = [
   {
     id: 1,
     icon: "rewards",
-    title: "Recompensas",
+    title: "Publicación y Gestión de Proyectos",
     description:
-      "Las mejores tarjetas de crédito ofrecen algunas combinaciones tentadoras de promociones y premios.",
+      "Comparte tus ideas, fija objetivos claros y permite que otros se sumen a tu visión.",
   },
   {
     id: 2,
     icon: "safe",
-    title: "100% Seguro",
+    title: "Colaboración Interdisciplinaria",
     description:
-      "Tomamos medidas proactivas para asegurarnos de que su información  y sus transacciones estén seguras.",
+      "Repify conecta a estudiantes de diferentes áreas para que colaboren.",
   },
   {
     id: 3,
     icon: "send",
-    title: "Envíos gratis",
+    title: "Visibilidad para tus Proyectos",
     description:
-      "Una tarjeta de crédito con transferencia de saldo puede ahorrarle mucho dinero en intereses.",
+      "Muestra tu trabajo a una comunidad más amplia y expón tus habilidades",
   },
 ];

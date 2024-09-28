@@ -14,20 +14,20 @@ export function BestBusiness() {
                 <div>
                     <Reveal>
                         <h2 className="text-5xl font-semibold">
-                            <span className="block degradedBlue bg-blueLight">Tú haces el negocio</span>
-                            nosotros manejamos <br />
-                            el dinero
+                            <span className="block degradedBlue bg-blueLight">Bienvenido a Repify</span>
+                            Potencia tu <br />
+                            Proyecto 
                         </h2>
                     </Reveal>
                     <Reveal>
-                        <p className="max-w-md mt-10">Con la tarjeta de crédito adecuada, puede mejorar su vida
-                            financiera generando crédito, obteniendo recompensas y
-                            ahorrando dinero. Pero con cientos de tarjetas de crédito en
-                            el mercado.</p>
+                        <p className="max-w-md mt-10">En Repify, somos la plataforma de colaboración donde 
+                            los estudiantes universitarios de todas las disciplinas
+                            pueden compartir, desarrollar y contribuir a proyectos innovadores.
+                            </p>
                     </Reveal>
                     <Reveal>
                         <div className="my-8">
-                            <Link href="#clients" className="px-4 py-3 rounded-md bg-blueRadial">Elige tu plan</Link>
+                            <Link href="#clients" className="px-4 py-3 rounded-md bg-blueRadial">Comenzar ahora</Link>
                         </div>
                     </Reveal>
                 </div>

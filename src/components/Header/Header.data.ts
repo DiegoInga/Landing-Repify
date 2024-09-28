@@ -1,12 +1,12 @@
 export const dataHeader = [
   {
     id: 1,
-    name: "Características",
+    name: "¿Que es Repify?",
     idLink: "#features",
   },
   {
     id: 2,
-    name: "Tarjetas",
+    name: "Nosotros",
     idLink: "#tarjetas",
   },
   {
@@ -16,7 +16,7 @@ export const dataHeader = [
   },
   {
     id: 4,
-    name: "Servicios",
+    name: "Colaboración",
     idLink: "#servicios",
   },
 ];
