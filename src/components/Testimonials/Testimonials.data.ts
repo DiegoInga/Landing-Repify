@@ -4,14 +4,14 @@ export const dataTestimonials = [
     name: "Max Ttito",
     work: "Bankend",
     testimonial: "Repify conecta estudiantes para colaborar.",
-    image: "/assets/tito.jpeg",
+    image: "/assets/circular_tito.png",
   },
   {
     id: 2,
     name: "Angel Capia",
     work: "Bankend",
     testimonial: "Fomenta el aprendizaje entre diversas carreras.",
-    image: "/assets/angel__1.png",
+    image: "/assets/circular_angel.png",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const dataTestimonials = [
   {
     id: 4,
     name: "Diego Inga",
-    work: "Frontendr",
+    work: "Frontend",
     testimonial: "Los usuarios pueden unirse y contribuir a proyectos.",
     image: "/assets/diego_circular.png",
   },
@@ -39,6 +39,6 @@ export const dataTestimonials = [
     name: "Jesus Pezo",
     work: "Tester",
     testimonial: "Fomenta la innovación y el desarrollo de habilidades.",
-    image: "/assets/yisus_circular.png",
+    image: "/assets/jesus.png",
   },
 ];
