@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react"; 
+import { useState } from "react";
 import Image from "next/image";
 import { MotionTransition } from "../MotionTransition"; // Asegúrate de tener este componente disponible
 import { Reveal } from "../Reveal";
@@ -95,33 +94,29 @@ const team: TeamMember[] = [
     name: "Edward Pittman",
     role: "Project Manager",
     image: "/assets/edward_circular.png",
-    skills: [
-      { name: "Figma", logo: "/assets/figma.svg" },
-    ],
+    skills: [{ name: "Figma", logo: "/assets/figma.svg" }],
   },
   {
     name: "Jesus Pezo",
     role: "Tester",
     image: "/assets/jesus.png",
-    skills: [
-      { name: "Github", logo: "/assets/github.svg" },
-    ],
+    skills: [{ name: "Github", logo: "/assets/github.svg" }],
   },
 ];
 
 export function NuestroEquipo() {
-  // Usamos un array de booleanos para controlar qué miembros tienen los skills visibles
-  const [showSkills, setShowSkills] = useState<boolean[]>(Array(team.length).fill(false));
+  const [activeMember, setActiveMember] = useState<number | null>(null);
 
-  // Función para alternar el estado de los skills de un miembro específico
   const toggleSkills = (index: number) => {
-    const updatedSkills = [...showSkills];
-    updatedSkills[index] = !updatedSkills[index];
-    setShowSkills(updatedSkills);
+    setActiveMember(activeMember === index ? null : index);
+  };
+
+  const closeSkills = () => {
+    setActiveMember(null);
   };
 
   return (
-    <div className="p-4 py-20 md:py-64">
+    <div className="p-4 py-20 md:py-64 relative">
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
         <Reveal>
           <h2 className="text-5xl font-semibold text-center degradedBlue bg-blueLight">Nuestro Equipo</h2>
@@ -130,8 +125,8 @@ export function NuestroEquipo() {
           {team.map((member, index) => (
             <MotionTransition key={index}>
               <div
-                className="p-8 w-full bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700 transition-all cursor-pointer"
-                onClick={() => toggleSkills(index)} // La acción ocurre al hacer clic en el div
+                className="p-8 w-full bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700 transition-all cursor-pointer relative"
+                onClick={() => toggleSkills(index)}
               >
                 <Image
                   src={member.image}
@@ -142,34 +137,43 @@ export function NuestroEquipo() {
                 />
                 <h3 className="text-xl font-bold text-center">{member.name}</h3>
                 <p className="text-center text-gray-400">{member.role}</p>
-                {showSkills[index] && (
-                  <div className="mt-4 p-4 bg-gray-700 rounded-lg">
-                    <h4 className="text-lg font-semibold text-center mb-4">Skills</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {member.skills.map((skill, skillIndex) => (
-                        <div
-                          key={skillIndex}
-                          className="flex items-center p-2 bg-gray-600 rounded-lg transition-transform transform hover:scale-105"
-                        >
-                          <img
-                            src={skill.logo}
-                            alt={skill.name}
-                            className="w-6 h-6 mr-2"
-                          />
-                          <span>{skill.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </MotionTransition>
           ))}
         </div>
+        {/* Ventana emergente de skills */}
+        {activeMember !== null && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-gray-800 p-8 rounded-lg shadow-lg relative">
+              <h4 className="text-lg font-semibold text-center mb-4">Skills de {team[activeMember].name}</h4>
+              <div className="grid grid-cols-2 gap-4">
+                {team[activeMember].skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="flex items-center p-2 bg-gray-600 rounded-lg transition-transform transform hover:scale-105"
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="w-6 h-6 mr-2"
+                    />
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+              {/* Botón para cerrar */}
+              <button
+                className="absolute top-2 right-2 text-white text-xl"
+                onClick={closeSkills}
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
 export default NuestroEquipo;
-
