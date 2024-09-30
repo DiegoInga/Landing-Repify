@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react"; 
 import Image from "next/image";
 import { MotionTransition } from "../MotionTransition"; // Asegúrate de tener este componente disponible
@@ -121,9 +122,9 @@ export function NuestroEquipo() {
 
   return (
     <div className="p-4 py-20 md:py-64">
-      <div className="max-w-7xl mx-auto">
+      <div id="nuestroequipo" className="max-w-7xl mx-auto">
         <Reveal>
-          <h2 className="text-5xl font-semibold text-center">Nuestro Equipo</h2>
+          <h2 className="text-5xl font-semibold text-center degradedBlue bg-blueLight">Nuestro Equipo</h2>
         </Reveal>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {team.map((member, index) => (
