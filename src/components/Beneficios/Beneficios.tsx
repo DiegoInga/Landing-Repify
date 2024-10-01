@@ -17,7 +17,7 @@ export const BenefitsSection: FC = () => {
     {
       icon: <Users className="w-12 h-12 mb-4 text-cyan-400" />,
       title: "Trabajo en Equipo",
-      description: "Desarrolla habilidades de colaboración en proyectos reales",
+      description: "Desarrolla habilidades de colaboración en proyectos",
     },
     {
       icon: <Rocket className="w-12 h-12 mb-4 text-purple-400" />,
@@ -32,7 +32,7 @@ export const BenefitsSection: FC = () => {
     {
       icon: <Briefcase className="w-12 h-12 mb-4 text-yellow-400" />,
       title: "Construcción de Portfolio",
-      description: "Crea un portafolio impresionante con proyectos reales",
+      description: "Crea un portafolio impresionante con proyectos",
     },
     {
       icon: <Network className="w-12 h-12 mb-4 text-green-400" />,
@@ -53,7 +53,7 @@ export const BenefitsSection: FC = () => {
   });
 
   return (
-    <div className="relative px-6 py-20 md:py-64" id="beneficios" ref={ref}>
+    <div id="beneficios" className="relative px-6 py-20 md:py-64" ref={ref}>
       {/* Título */}
       <div className="container px-4 mx-auto">
         <motion.h2
