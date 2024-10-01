@@ -1,11 +1,10 @@
-import { BestBusiness } from "@/components/BestBusiness";
-import { ChooseYourCards } from "@/components/ChooseYourCards";
-import { CounterData } from "@/components/CounterData";
-import { FirstBlock } from "@/components/FirstBlock";
-import { Footer } from "@/components/Footer/";
+import { BestBusiness } from "@/components/que_es_repify";
+import { Beneficios } from "@/components/Beneficios/Beneficios";
+import { Contador } from "@/components/Contador";
+import { Principal } from "@/components/Principal";
 import { Header } from "@/components/Header";
-import { PaymentsMethods } from "@/components/PaymentsMethods";
-import { Testimonials } from "@/components/Testimonials";
+import { PaymentsMethods } from "@/components/universidades";
+import { NuestrasPalabras } from "@/components/Testimonials";
 import { NuestroEquipo } from "@/components/NuestroEquipo/NuestroEquipo";
 
 
@@ -13,14 +12,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <FirstBlock />
-      <CounterData />
+      <Principal />
+      <Contador />
       <BestBusiness />
-      <ChooseYourCards />
+      <Beneficios />
       <NuestroEquipo />
-      <Testimonials />
+      <NuestrasPalabras />
       <PaymentsMethods />
-      <Footer />
     </>
   )
 }

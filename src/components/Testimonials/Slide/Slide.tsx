@@ -2,7 +2,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { dataTestimonials } from '../Testimonials.data'
+import { dataTestimonials } from '../NuestrasPalabras.data'
 import { Reveal } from '@/components/Reveal'
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules'
 
