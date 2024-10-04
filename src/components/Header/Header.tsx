@@ -43,7 +43,7 @@ export function Header() {
       <Reveal>
         <div className="my-8">
           <Link href="#clients" className="px-4 py-3 rounded-md bg-blueRadial transition-colors duration-300 hover:bg-blue-600">
-            Empieza ahora
+            Iniciar Sesion
           </Link>
         </div>
       </Reveal>
