@@ -114,7 +114,9 @@ export function NuestroEquipo() {
   return (
     <div className="p-4 py-20 md:py-64 relative">
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-semibold text-center text-blue-600">Nuestro Equipo</h2>
+        <Reveal>
+          <h2 className="text-5xl font-semibold text-center degradedBlue bg-blueLight">Nuestro Equipo</h2>
+        </Reveal>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {team.map((member, index) => (
             <div
@@ -162,10 +164,3 @@ export function NuestroEquipo() {
 }
 
 export default NuestroEquipo;
-
-
-
-
-
-
-
