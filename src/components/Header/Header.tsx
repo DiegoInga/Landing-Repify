@@ -27,8 +27,7 @@ export function Header() {
               {[
                 { id: 1, name: "¿Qué es Repify?", idLink: "#features" },
                 { id: 2, name: "Beneficios", idLink: "#beneficios" },
-                { id: 3, name: "Nuestro Equipo", idLink: "#nuestroequipo" },
-                { id: 4, name: "Testimonios", idLink: "#testimonios" },
+                { id: 3, name: "Nuestro Equipo", idLink: "#nuestroequipo" }, 
                 { id: 5, name: "Colaboración", idLink: "#servicios" },
               ].map(({ id, name, idLink }) => (
                 <div key={id} className="px-2 transition-all duration-500 ease-in-out">
@@ -53,7 +52,6 @@ export function Header() {
                 { id: 1, name: "¿Qué es Repify?", idLink: "/que-es-repify" },
                 { id: 2, name: "Beneficios", idLink: "/beneficios" },
                 { id: 3, name: "Nuestro Equipo", idLink: "/nuestro-equipo" },
-                { id: 4, name: "Testimonios", idLink: "/testimonios" },
                 { id: 5, name: "Colaboración", idLink: "/colaboracion" },
               ].map(({ id, name, idLink }) => (
                 <div key={id} className="px-4 transition-all duration-500 ease-in-out">

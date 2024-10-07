@@ -69,7 +69,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Diego Inga",
-    role: "Diseñador UI/UX",
+    role: "Desarrollador Frontend",
     image: "/assets/foto.jpg",
     skills: [
       { name: "TypeScript", logo: "/assets/ts.svg" },
@@ -112,7 +112,7 @@ export function NuestroEquipo() {
   };
 
   return (
-    <div className="p-4 py-20 md:py-64 relative">
+    <div className="p-4 py-20 md:py-55 relative">
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-semibold text-center text-blue-600 degradedBlue bg-blueLight">Nuestro Equipo</h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 mt-10">

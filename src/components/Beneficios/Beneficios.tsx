@@ -53,7 +53,7 @@ export const BenefitsSection: FC = () => {
   });
 
   return (
-    <div id="beneficios" className="relative px-6 py-20 md:py-64" ref={ref}>
+    <div id="beneficios" className="relative px-6 py-20 md:py-55" ref={ref}>
       {/* Título */}
       <div className="container px-4 mx-auto">
         <motion.h2

@@ -8,8 +8,8 @@ import { CtaDark } from '../CtaDark'
 
 export function PaymentsMethods() {
     return (
-        <div className="relative py-20 md:py-64" id="servicios">
-            <BackgroundRadialRight />
+        <div className="relative py-20 md:py-55" id="servicios">
+            
             <div className="relative w-full overflow-hidden">
                 <Swiper
                     breakpoints={{
