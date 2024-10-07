@@ -114,12 +114,12 @@ export function NuestroEquipo() {
   return (
     <div className="p-4 py-20 md:py-64 relative">
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-semibold text-center text-blue-600">Nuestro Equipo</h2>
+        <h2 className="text-5xl font-semibold text-center text-blue-600 degradedBlue bg-blueLight">Nuestro Equipo</h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {team.map((member, index) => (
             <div
               key={index}
-              className="relative w-[400px] h-[400px] group"
+              className="relative w-[300px] h-[300px] group"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
@@ -131,28 +131,30 @@ export function NuestroEquipo() {
                 height={400}
                 className="w-full h-full object-cover rounded-lg"
               />
-              <div className="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white p-4 rounded-b-lg">
-                <h3 className="text-xl font-bold text-center">{member.name}</h3>
-                <p className="text-center text-gray-300">{member.role}</p>
-              </div>
+               <div className="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white p-3 rounded-b-lg">
+                    <h3 className="text-sm font-bold text-center">{member.name}</h3>
+                    <p className="text-center text-gray-400 text-xs">{member.role}</p>
+                </div>
+
 
               {/* Skills del miembro, visible solo si es el miembro hover */}
               {hoveredMemberIndex === index && (
-                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 rounded-lg flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out">
-                  <h4 className="text-lg font-semibold text-center text-white mb-4">Skills</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {member.skills.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className="flex flex-col items-center justify-center text-white bg-gray-700 p-2 rounded-md transition-transform duration-300"
-                      >
-                        <Image src={skill.logo} alt={skill.name} width={24} height={24} className="mb-1" /> {/* Reducido el tamaño del logo */}
-                        <span className="text-xs">{skill.name}</span> {/* Reducido el tamaño del texto */}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+  <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 rounded-lg flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out p-1">
+    <h4 className="text-xs font-semibold text-center text-white mb-1">Skills</h4>
+    <div className="grid grid-cols-2 gap-1">
+      {member.skills.map((skill, skillIndex) => (
+        <div
+          key={skillIndex}
+          className="flex flex-col items-center justify-center text-white bg-gray-700 p-1 rounded-md transition-transform duration-300"
+        >
+          <Image src={skill.logo} alt={skill.name} width={12} height={12} className="mb-0.5" /> {/* Reducido el tamaño del logo */}
+          <span className="text-[10px]">{skill.name}</span> {/* Tamaño del texto aún más pequeño */}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
             </div>
           ))}
         </div>

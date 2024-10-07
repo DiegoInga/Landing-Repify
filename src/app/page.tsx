@@ -17,7 +17,6 @@ export default function Home() {
       <BestBusiness />
       <Beneficios />
       <NuestroEquipo />
-      <NuestrasPalabras />
       <PaymentsMethods />
     </>
   )

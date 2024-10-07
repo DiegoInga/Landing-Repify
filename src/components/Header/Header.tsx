@@ -40,24 +40,6 @@ export function Header() {
             </div>
           </div>
 
-          {/* Botones alineados a la derecha */}
-          <div className="flex space-x-4"> {/* Ajustamos el espacio entre botones y menú */}
-            <Reveal>
-              <div className="my-8">
-                <Link href="#clients" className="px-4 py-3 rounded-md bg-blueRadial transition-colors duration-300 hover:bg-blue-600">
-                  Iniciar Sesión
-                </Link>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="my-8">
-                <Link href="#register" className="px-4 py-3 rounded-md bg-blueRadial transition-colors duration-300 hover:bg-blue-600">
-                  Registrarse
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-
           {/* Menú hamburguesa para móviles */}
           <RiMenu3Line
             className="block text-3xl md:hidden cursor-pointer"
