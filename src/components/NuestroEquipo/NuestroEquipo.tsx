@@ -21,7 +21,7 @@ const team: TeamMember[] = [
   {
     name: "Deyvi Sanchez",
     role: "Desarrollador Frontend",
-    image: "/assets/sago2.png",
+    image: "/assets/deyvi.webp",
     skills: [
       { name: "React", logo: "/assets/react.svg" },
       { name: "TypeScript", logo: "/assets/ts.svg" },
@@ -38,7 +38,7 @@ const team: TeamMember[] = [
   {
     name: "Max Ttito",
     role: "Desarrollador Backend",
-    image: "/assets/tito.png",
+    image: "/assets/tito1.webp",
     skills: [
       { name: "Amazon RDS", logo: "/assets/amazondb.svg" },
       { name: "AWS", logo: "/assets/amazonws.svg" },
