@@ -93,9 +93,7 @@ const team: TeamMember[] = [
     name: "Jesus Pezo",
     role: "Tester",
     image: "/assets/jesus2.png",
-    skills: [
-      
-    ],
+    skills: [],
   },
 ];
 
@@ -115,11 +113,11 @@ export function NuestroEquipo() {
     <div className="p-4 py-20 md:py-55 relative">
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-semibold text-center text-blue-600 degradedBlue bg-blueLight">Nuestro Equipo</h2>
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 mt-10">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10 justify-items-center">
           {team.map((member, index) => (
             <div
               key={index}
-              className="relative w-[300px] h-[300px] group"
+              className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] group flex items-center justify-center"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
@@ -127,33 +125,32 @@ export function NuestroEquipo() {
               <Image
                 src={member.image}
                 alt={member.name}
-                width={400}  // Ajustamos el ancho de la imagen
-                height={400}
-                className="w-full h-full object-cover rounded-lg"
+                layout="fill" // Asegura que la imagen se ajuste al contenedor
+                objectFit="cover" // Esto asegura que la imagen siempre ocupe todo el espacio sin distorsionarse
+                className="rounded-lg"
               />
-               <div className="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white p-3 rounded-b-lg">
+              <div className="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white p-3 rounded-b-lg">
                     <h3 className="text-sm font-bold text-center">{member.name}</h3>
                     <p className="text-center text-gray-400 text-xs">{member.role}</p>
                 </div>
 
-
               {/* Skills del miembro, visible solo si es el miembro hover */}
               {hoveredMemberIndex === index && (
-  <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 rounded-lg flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out p-1">
-    <h4 className="text-xs font-semibold text-center text-white mb-1">Skills</h4>
-    <div className="grid grid-cols-2 gap-1">
-      {member.skills.map((skill, skillIndex) => (
-        <div
-          key={skillIndex}
-          className="flex flex-col items-center justify-center text-white bg-gray-700 p-1 rounded-md transition-transform duration-300"
-        >
-          <Image src={skill.logo} alt={skill.name} width={12} height={12} className="mb-0.5" /> {/* Reducido el tamaño del logo */}
-          <span className="text-[10px]">{skill.name}</span> {/* Tamaño del texto aún más pequeño */}
-        </div>
-      ))}
-    </div>
-  </div>
-)}
+                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 rounded-lg flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out p-2">
+                  <h4 className="text-xs font-semibold text-center text-white mb-2">Skills</h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {member.skills.map((skill, skillIndex) => (
+                      <div
+                        key={skillIndex}
+                        className="flex flex-col items-center justify-center text-white bg-gray-700 p-1 rounded-md transition-transform duration-300"
+                      >
+                        <Image src={skill.logo} alt={skill.name} width={18} height={18} className="mb-0.5" /> {/* Reducido el tamaño del logo */}
+                        <span className="text-[10px]">{skill.name}</span> {/* Tamaño del texto aún más pequeño */}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
             </div>
           ))}
@@ -164,6 +161,9 @@ export function NuestroEquipo() {
 }
 
 export default NuestroEquipo;
+
+
+
 
 
 
