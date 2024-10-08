@@ -14,9 +14,4 @@ export const dataHeader = [
     name: "Nuestro Equipo",
     idLink: "#nuestroequipo",
   },
-  {
-    id: 4,
-    name: "Colaboración",
-    idLink: "#servicios",
-  },
 ];

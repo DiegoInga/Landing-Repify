@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { BackgroundRadialRight } from "../BackgroundRadialRight";
 
 // Tipos para el equipo y las habilidades
 type Skill = {
@@ -92,7 +93,7 @@ const team: TeamMember[] = [
   {
     name: "Jesus Pezo",
     role: "Tester",
-    image: "/assets/jesus2.png",
+    image: "/assets/jesuss.jpg",
     skills: [],
   },
 ];
@@ -110,7 +111,9 @@ export function NuestroEquipo() {
   };
 
   return (
+    
     <div className="p-4 py-20 md:py-55 relative">
+      <BackgroundRadialRight />
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-semibold text-center text-blue-600 degradedBlue bg-blueLight">Nuestro Equipo</h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10 justify-items-center">

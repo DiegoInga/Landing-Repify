@@ -32,9 +32,7 @@ export function Principal() {
             <Reveal>
                 <p className="max-w-md mt-10">
                     Repify une a estudiantes de diferentes disciplinas para
-                    crear proyectos innovadores y multidisciplinarios,
-                    facilitando la colaboración en proyectos universitarios,
-                    desde investigaciones hasta iniciativas personales.
+                    crear proyectos innovadores y multidisciplinarios.
                 </p>
             </Reveal>
             <Reveal>
