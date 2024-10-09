@@ -17,7 +17,7 @@ type TeamMember = {
   skills: Skill[];
 };
 
-// Datos del equipo con una imagen de prueba "/assets/foto.jpg"
+// Datos del equipo
 const team: TeamMember[] = [
   {
     name: "Deyvi Sanchez",
@@ -39,7 +39,7 @@ const team: TeamMember[] = [
   {
     name: "Max Ttito",
     role: "Desarrollador Backend",
-    image: "/assets/tito1.webp",
+    image: "/assets/tiooo.webp",
     skills: [
       { name: "Amazon RDS", logo: "/assets/amazondb.svg" },
       { name: "AWS", logo: "/assets/amazonws.svg" },
@@ -85,7 +85,7 @@ const team: TeamMember[] = [
   {
     name: "Edward Pittman",
     role: "Diseño UX/UI",
-    image: "/assets/edward2.png",
+    image: "/assets/edward.webp",
     skills: [
       { name: "Figma", logo: "/assets/figma.svg" },
     ],
@@ -111,7 +111,6 @@ export function NuestroEquipo() {
   };
 
   return (
-    
     <div className="p-4 py-20 md:py-55 relative">
       <BackgroundRadialRight />
       <div id="nuestroequipo" className="max-w-7xl mx-auto">
@@ -125,17 +124,19 @@ export function NuestroEquipo() {
               onMouseLeave={handleMouseLeave}
             >
               {/* Imagen y nombre del miembro */}
-              <Image
-                src={member.image}
-                alt={member.name}
-                layout="fill" // Asegura que la imagen se ajuste al contenedor
-                objectFit="cover" // Esto asegura que la imagen siempre ocupe todo el espacio sin distorsionarse
-                className="rounded-lg"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Ajusta el tamaño según el dispositivo
+                  className="rounded-lg object-cover" // Asegura que la imagen ocupe todo el espacio sin distorsionarse
+                />
+              </div>
               <div className="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white p-3 rounded-b-lg">
-                    <h3 className="text-sm font-bold text-center">{member.name}</h3>
-                    <p className="text-center text-gray-400 text-xs">{member.role}</p>
-                </div>
+                <h3 className="text-sm font-bold text-center">{member.name}</h3>
+                <p className="text-center text-gray-400 text-xs">{member.role}</p>
+              </div>
 
               {/* Skills del miembro, visible solo si es el miembro hover */}
               {hoveredMemberIndex === index && (
@@ -147,14 +148,13 @@ export function NuestroEquipo() {
                         key={skillIndex}
                         className="flex flex-col items-center justify-center text-white bg-gray-700 p-1 rounded-md transition-transform duration-300"
                       >
-                        <Image src={skill.logo} alt={skill.name} width={18} height={18} className="mb-0.5" /> {/* Reducido el tamaño del logo */}
-                        <span className="text-[10px]">{skill.name}</span> {/* Tamaño del texto aún más pequeño */}
+                        <Image src={skill.logo} alt={skill.name} width={18} height={18} className="mb-0.5" />
+                        <span className="text-[10px]">{skill.name}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
-
             </div>
           ))}
         </div>
@@ -164,6 +164,7 @@ export function NuestroEquipo() {
 }
 
 export default NuestroEquipo;
+
 
 
 
