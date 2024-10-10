@@ -73,13 +73,14 @@ const team: TeamMember[] = [
     role: "Desarrollador Frontend",
     image: "/assets/foto.jpg",
     skills: [
-      { name: "TypeScript", logo: "/assets/ts.svg" },
       { name: "Figma", logo: "/assets/figma.svg" },
+      { name: "Next.js", logo: "/assets/next.svg" },
       { name: "JavaScript", logo: "/assets/js.svg" },
       { name: "Git", logo: "/assets/git.svg" },
       { name: "HTML", logo: "/assets/html.svg" },
       { name: "CSS", logo: "/assets/css.svg" },
       { name: "Tailwind CSS", logo: "/assets/tailwind.svg" },
+      { name: "React", logo: "/assets/react.svg" },
     ],
   },
   {
@@ -88,6 +89,9 @@ const team: TeamMember[] = [
     image: "/assets/edward.webp",
     skills: [
       { name: "Figma", logo: "/assets/figma.svg" },
+      { name: "HTML", logo: "/assets/html.svg" },
+      { name: "CSS", logo: "/assets/css.svg" },
+      { name: "JavaScript", logo: "/assets/js.svg" },
     ],
   },
   {
